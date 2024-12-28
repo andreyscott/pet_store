@@ -51,7 +51,7 @@ List<PetsModel> cats = [
     image: 'images/cat1.png',
     age: "3 ",
     origin: "Iran",
-    sex: "Femail ",
+    sex: "Female ",
     color: const Color(0xffB1D1FF),
     description:
         "Pets bring joy, companionship, and love into our lives. Whether furry, feathered, or scaled, they offer comfort and loyalty. From playful antics to gentle purrs, they teach us patience and responsibility.",
@@ -64,7 +64,7 @@ List<PetsModel> dogs = [
     image: 'images/dog1.png',
     age: " 1",
     origin: "UK",
-    sex: "Dog",
+    sex: "Male",
     color: const Color(0xffC1B7B1),
     description:
         "Pets bring joy, companionship, and love into our lives. Whether furry, feathered, or scaled, they offer comfort and loyalty. From playful antics to gentle purrs, they teach us patience and responsibility.",
@@ -75,7 +75,7 @@ List<PetsModel> dogs = [
     image: 'images/dog2.png',
     age: " 2",
     origin: "Italy",
-    sex: "Dog",
+    sex: "Male",
     color: const Color(0xffD7BF9D),
     description:
         "Pets bring joy, companionship, and love into our lives. Whether furry, feathered, or scaled, they offer comfort and loyalty. From playful antics to gentle purrs, they teach us patience and responsibility.",
@@ -86,7 +86,7 @@ List<PetsModel> dogs = [
     image: 'images/dog3.png',
     age: " 2.5",
     origin: "India",
-    sex: "Dog",
+    sex: "Male",
     color: const Color(0xffB1D1FF),
     description:
         "Pets bring joy, companionship, and love into our lives. Whether furry, feathered, or scaled, they offer comfort and loyalty. From playful antics to gentle purrs, they teach us patience and responsibility.",
@@ -97,7 +97,7 @@ List<PetsModel> dogs = [
     image: 'images/dog4.png',
     age: "2.5",
     origin: "India",
-    sex: "Dog",
+    sex: "Female",
     color: const Color(0xffC1B7B1),
     description:
         "Pets bring joy, companionship, and love into our lives. Whether furry, feathered, or scaled, they offer comfort and loyalty. From playful antics to gentle purrs, they teach us patience and responsibility.",
@@ -108,7 +108,7 @@ List<PetsModel> dogs = [
     image: 'images/dog5.png',
     age: " 2.5",
     origin: "India",
-    sex: "Dog",
+    sex: "Male",
     color: const Color(0xffB1D1FF),
     description:
         "Pets bring joy, companionship, and love into our lives. Whether furry, feathered, or scaled, they offer comfort and loyalty. From playful antics to gentle purrs, they teach us patience and responsibility.",

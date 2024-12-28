@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:pet_store/Model/pets_model.dart';
 import 'package:pet_store/Screens/Details.dart';
 
-
 class PetsHome extends StatefulWidget {
   const PetsHome({super.key});
 
@@ -18,9 +17,10 @@ class _PetsHomeState extends State<PetsHome> {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SafeArea(child: 
-        SingleChildScrollView(
-          child : Column(  crossAxisAlignment: CrossAxisAlignment.start,
+      body: SafeArea(
+          child: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Padding(
               padding: EdgeInsets.only(left: 22),
@@ -59,9 +59,8 @@ class _PetsHomeState extends State<PetsHome> {
                     ]),
               ),
             ),
-
             const SizedBox(height: 20),
-            // categorySelection(),
+            categorySelection(),
             selectedIndex < categoryList.length
                 ? (Padding(
                     padding: const EdgeInsets.only(left: 22),
@@ -75,8 +74,7 @@ class _PetsHomeState extends State<PetsHome> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                    builder: (context) => 
-                                    Details(
+                                    builder: (context) => Details(
                                       pets: categories[selectedIndex][index],
                                     ),
                                   ),
@@ -211,6 +209,65 @@ class _PetsHomeState extends State<PetsHome> {
           ],
         ),
       )),
+    );
+  }
+
+  SizedBox categorySelection() {
+    return SizedBox(
+      height: 100,
+      child: ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: categoryList.length,
+        physics: const BouncingScrollPhysics(),
+        itemBuilder: ((context, index) {
+          return GestureDetector(
+            onTap: () {
+              setState(() {
+                selectedIndex = index;
+              });
+            },
+            child: Padding(
+              padding: const EdgeInsets.only(left: 30, top: 10),
+              child: Column(
+                children: [
+                  Container(
+                    height: 80,
+                    width: 75,
+                    decoration: BoxDecoration(
+                      color: selectedIndex == index
+                          ? const Color(0xffFF9166)
+                          : const Color(0xffFF9166).withOpacity(0.1),
+                      borderRadius: BorderRadius.circular(15),
+                      boxShadow: [
+                        BoxShadow(
+                          color: selectedIndex == index
+                              ? const Color(0xffFF9166).withOpacity(0.5)
+                              : Colors.transparent,
+                          blurRadius: 12,
+                          spreadRadius: 1,
+                        ),
+                      ],
+                    ),
+                    child: Center(
+                      child: Text(
+                        categoryList[index],
+                        style: TextStyle(
+                            color: selectedIndex == index
+                                ? Colors.white
+                                : Colors.amber[900],
+                            fontWeight: selectedIndex == index
+                                ? FontWeight.bold
+                                : FontWeight.normal,
+                            fontSize: 18),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          );
+        }),
+      ),
     );
   }
 }
